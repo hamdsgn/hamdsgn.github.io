@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-hamilton-ramirez",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio de Hamilton Ramírez — frontend developer y especialista en sistemas de diseño. HTML, CSS y JavaScript sin dependencias",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000"
+  }
+}

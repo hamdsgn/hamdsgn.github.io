@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>404 · Hamilton Ramírez</title>
+<script>
+  (function () {
+    var path = location.pathname.replace(/\/+$/, '');
+    if (path && path !== '/index.html') {
+      location.replace('/' + location.search + location.hash);
+    }
+  })();
+</script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #07070a;
+    --text: #f2f2f5;
+    --muted: #7a7a8c;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+      radial-gradient(60% 50% at 20% 0%, rgba(109, 94, 252, 0.18), transparent 70%),
+      radial-gradient(50% 45% at 85% 20%, rgba(255, 77, 141, 0.14), transparent 70%),
+      var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    text-align: center;
+  }
+  main { max-width: 34rem; }
+  .code {
+    margin: 0 0 0.4em;
+    font-size: clamp(3.5rem, 14vw, 7rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    background: linear-gradient(120deg, #6d5efc 0%, #ff4d8d 55%, #ffc247 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  h1 {
+    margin: 0 0 0.6em;
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  p {
+    margin: 0 0 2em;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  a {
+    display: inline-block;
+    padding: 0.85em 1.4em;
+    border: 1px solid rgba(242, 242, 245, 0.18);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  a:hover, a:focus-visible {
+    border-color: rgba(242, 242, 245, 0.45);
+    background: rgba(242, 242, 245, 0.06);
+    outline: none;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <p class="code">404</p>
+    <h1>Esta página no existe.</h1>
+    <p>Puede que el enlace esté roto o que la página se haya movido. Te llevo de vuelta al inicio.</p>
+    <a href="/">Volver al inicio <span aria-hidden="true">→</span></a>
+  </main>
+</body>
+</html>
