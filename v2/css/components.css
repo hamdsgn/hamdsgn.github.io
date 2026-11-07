@@ -1,0 +1,569 @@
+/* ==========================================================================
+   V2 · components
+   Preloader, cursor, marquee, botones, filtros, preview, badge, sociales…
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Skip link
+   -------------------------------------------------------------------------- */
+
+.skip {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 500;
+  padding: 0.7rem 1rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: translateY(-160%);
+  transition: transform 0.3s var(--ease);
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Preloader
+   -------------------------------------------------------------------------- */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: var(--gutter);
+  background: var(--bg);
+  transition: opacity 0.7s var(--ease), visibility 0.7s;
+}
+
+.preloader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader.is-gone {
+  display: none;
+}
+
+.preloader__inner {
+  width: min(560px, 100%);
+  transition: transform 0.6s var(--ease), opacity 0.5s var(--ease);
+}
+
+.preloader.is-done .preloader__inner {
+  opacity: 0;
+  transform: translateY(-18px);
+}
+
+.preloader__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.preloader__role {
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.preloader__count {
+  margin-top: clamp(2rem, 6vh, 4rem);
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 16vw, 10rem);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.preloader__rail {
+  position: relative;
+  margin-top: 1.25rem;
+  height: 1px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.preloader__rail i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s linear;
+}
+
+/* --------------------------------------------------------------------------
+   Cursor
+   -------------------------------------------------------------------------- */
+
+.cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+}
+
+.cursor.is-visible {
+  opacity: 1;
+}
+
+.cursor__dot,
+.cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cursor__dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--accent);
+  transition: opacity 0.25s var(--ease);
+}
+
+.cursor__ring {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid rgba(242, 239, 231, 0.45);
+  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.cursor__label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease);
+}
+
+.cursor.is-hover .cursor__ring {
+  border-color: var(--accent);
+}
+
+.cursor.is-hover .cursor__dot,
+.cursor.is-view .cursor__dot {
+  opacity: 0;
+}
+
+.cursor.is-view .cursor__ring {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.cursor.is-view .cursor__label {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
+
+/* El preview flotante solo existe con puntero fino */
+@media (hover: none), (max-width: 899px) {
+  .work-preview {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Marquee
+   -------------------------------------------------------------------------- */
+
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--line-soft);
+  background: var(--bg-1);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 42s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__group {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  padding: clamp(0.9rem, 1.6vw, 1.2rem) clamp(1.5rem, 3vw, 2.75rem)
+    clamp(0.9rem, 1.6vw, 1.2rem) 0;
+}
+
+.marquee__group span {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.7rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--ink-dim);
+}
+
+.marquee__group i {
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Botones
+   -------------------------------------------------------------------------- */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9rem 1.45rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  transition: background-color 0.35s var(--ease), color 0.35s var(--ease),
+    border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.btn span {
+  transition: transform 0.35s var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover span {
+  transform: translate(2px, -2px);
+}
+
+.btn--solid {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn--solid:hover {
+  background: var(--accent-hi);
+}
+
+.btn--ghost {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Filtros
+   -------------------------------------------------------------------------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.filter span {
+  font-size: 0.56rem;
+  color: var(--ink-mute);
+  transition: color 0.3s var(--ease);
+}
+
+.filter:hover {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.filter.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.filter.is-active span {
+  color: rgba(25, 18, 4, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Preview flotante de trabajo
+   -------------------------------------------------------------------------- */
+
+.work-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: clamp(190px, 19vw, 290px);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+}
+
+.work-preview.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);
+  transition: transform 0.6s var(--ease), opacity 0.3s var(--ease);
+}
+
+.work-preview.is-visible img {
+  transform: scale(1);
+}
+
+.work-preview.has-mono img {
+  opacity: 0;
+}
+
+.work-preview__mono {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      80% 80% at 50% 40%,
+      rgba(245, 165, 36, 0.14),
+      transparent 70%
+    ),
+    var(--bg-2);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.work-preview.has-mono .work-preview__mono {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badge / ficha
+   -------------------------------------------------------------------------- */
+
+.badge {
+  position: absolute;
+  right: clamp(-1.5rem, -1vw, -0.5rem);
+  bottom: clamp(0.5rem, 2vw, 1.5rem);
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  grid-template-areas:
+    "photo name"
+    "photo role"
+    "photo meta"
+    "code code";
+  gap: 0.15rem 0.8rem;
+  width: clamp(190px, 16vw, 240px);
+  padding: 0.85rem;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.badge__photo {
+  grid-area: photo;
+  width: 58px;
+  height: 74px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.badge__name {
+  grid-area: name;
+  align-self: end;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.badge__role {
+  grid-area: role;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.badge__meta {
+  grid-area: meta;
+  align-self: start;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.badge__code {
+  grid-area: code;
+  display: block;
+  height: 16px;
+  margin-top: 0.6rem;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--bg) 0 1px,
+    transparent 1px 3px,
+    var(--bg) 3px 5px,
+    transparent 5px 7px
+  );
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Redes y estado
+   -------------------------------------------------------------------------- */
+
+.socials li {
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.socials li:first-child {
+  border-top: 1px solid var(--line-soft);
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+  color: var(--ink-dim);
+  transition: color 0.3s var(--ease);
+}
+
+.socials a span {
+  color: var(--ink-mute);
+  transition: transform 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.socials a:hover {
+  color: var(--accent);
+}
+
+.socials a:hover span {
+  transform: translate(2px, -2px);
+  color: var(--accent);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.status__dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2.6s var(--ease-io) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Toast
+   -------------------------------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  z-index: 400;
+  max-width: calc(100vw - 2rem);
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease),
+    visibility 0.35s;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}

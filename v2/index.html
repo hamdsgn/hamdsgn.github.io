@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hamilton Ramírez — Webs con carácter · Frontend Developer &amp; UX/UI</title>
+  <meta name="description" content="Hamilton Ramírez, frontend developer y diseñador UX/UI con +6 años de experiencia. WordPress a medida, React y sistemas de diseño para marcas como Rolex, Vodafone, CEU, NTTData y KIA." />
+  <meta name="author" content="Hamilton Ramírez" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hamilton Ramírez — Webs con carácter" />
+  <meta property="og:description" content="Frontend developer y diseñador UX/UI. +6 años construyendo interfaces, sistemas de diseño y WordPress a medida." />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/img/hero-portrait-700.webp" as="image" imagesrcset="assets/img/hero-portrait-700.webp 700w, assets/img/hero-portrait-1086.webp 1086w" imagesizes="(max-width: 900px) 82vw, 34vw" type="image/webp" />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body class="is-locked">
+  <noscript>
+    <style>
+      body.is-locked { overflow: auto; }
+      .preloader, .cursor { display: none; }
+      [data-reveal], .line__in { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <p class="preloader__name">Hamilton Ramírez</p>
+      <p class="preloader__role">Frontend developer · UX/UI</p>
+      <div class="preloader__count" id="preloaderCount">000</div>
+      <div class="preloader__rail"><i id="preloaderBar"></i></div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"><span class="cursor__label"></span></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="shell header__inner">
+      <a class="brand" href="#inicio" aria-label="Hamilton Ramírez, ir al inicio">
+        Ramírez<span class="dot">.</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="#trabajo"><span class="nav__num">01</span><span>Trabajo</span></a>
+        <a class="nav__link" href="#sobre-mi"><span class="nav__num">02</span><span>Sobre mí</span></a>
+        <a class="nav__link" href="#servicios"><span class="nav__num">03</span><span>Servicios</span></a>
+        <a class="nav__link" href="#experiencia"><span class="nav__num">04</span><span>Experiencia</span></a>
+      </nav>
+
+      <div class="header__actions">
+        <span class="status"><span class="status__dot"></span>Disponible</span>
+        <a class="header__cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────────────────── HERO ───────────────────────── -->
+    <section class="hero" id="inicio">
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal" data-reveal>
+            <span class="eyebrow__dot"></span>Frontend developer · UX/UI — Madrid
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span class="line__in" style="--d: 0ms">Webs</span></span>
+            <span class="line"><span class="line__in" style="--d: 90ms">con</span></span>
+            <span class="line"><span class="line__in" style="--d: 180ms">carácter<span class="dot">.</span></span></span>
+          </h1>
+
+          <p class="hero__lead reveal" data-reveal data-delay="260">
+            Seis años convirtiendo ideas en interfaces que se sienten y funcionan.
+            Diseño, código y sistemas que aguantan el día a día.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal data-delay="340">
+            <a class="btn btn--solid" href="#trabajo">Ver trabajo <span aria-hidden="true">↘</span></a>
+            <a class="btn btn--ghost" href="#contacto">Hablemos</a>
+          </div>
+        </div>
+
+        <figure class="hero__visual reveal" data-reveal data-delay="160">
+          <div class="hero__frame" aria-hidden="true"></div>
+          <img
+            class="hero__img"
+            src="assets/img/hero-portrait-700.webp"
+            srcset="assets/img/hero-portrait-700.webp 700w, assets/img/hero-portrait-1086.webp 1086w"
+            sizes="(max-width: 900px) 82vw, 34vw"
+            width="1086" height="1448"
+            alt="Retrato de Hamilton Ramírez iluminado con luz roja y naranja"
+            fetchpriority="high" decoding="async" />
+          <figcaption class="hero__caption">
+            <span>Madrid · 40.4°N</span>
+            <span>001 / 2027</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="shell hero__foot">
+        <span class="mono">Portfolio 2027 — 001</span>
+        <a class="hero__scroll" href="#trabajo"><span class="mono">Scroll</span><i aria-hidden="true"></i></a>
+        <span class="mono">Madrid <time class="js-clock">--:--</time></span>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── MARQUEE ───────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <div class="marquee__group">
+          <span>Diseño</span><i>✳</i><span>Código</span><i>✳</i><span>Accesibilidad</span><i>✳</i>
+          <span>Rendimiento</span><i>✳</i><span>WordPress</span><i>✳</i><span>React</span><i>✳</i>
+          <span>Design systems</span><i>✳</i><span>UX/UI</span><i>✳</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────────────────── PERFIL ───────────────────────── -->
+    <section class="section statement">
+      <div class="shell statement__grid">
+        <p class="kicker reveal" data-reveal>01 — Perfil</p>
+
+        <p class="statement__text reveal" data-reveal data-delay="60">
+          Construyo interfaces que <em>no solo funcionan</em>: se recuerdan. Del Figma al
+          despliegue, con la obsesión de que cada píxel tenga una razón y cada milisegundo
+          cuente.
+        </p>
+
+        <dl class="stats">
+          <div class="stat reveal" data-reveal>
+            <dt class="stat__num" data-count="6" data-suffix="+">0</dt>
+            <dd class="stat__label">Años de experiencia</dd>
+          </div>
+          <div class="stat reveal" data-reveal data-delay="80">
+            <dt class="stat__num" data-count="17">0</dt>
+            <dd class="stat__label">Proyectos publicados</dd>
+          </div>
+          <div class="stat reveal" data-reveal data-delay="160">
+            <dt class="stat__num" data-count="20" data-suffix="%">0</dt>
+            <dd class="stat__label">Menos tiempo de desarrollo</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── TRABAJO ───────────────────────── -->
+    <section class="section work-section" id="trabajo">
+      <div class="shell">
+        <header class="section__head">
+          <p class="kicker reveal" data-reveal>02 — Trabajo</p>
+          <h2 class="section__title reveal" data-reveal data-delay="60">
+            <span class="line"><span class="line__in">Trabajo</span></span>
+            <span class="line"><span class="line__in">seleccionado<span class="dot">.</span></span></span>
+          </h2>
+          <p class="section__note reveal" data-reveal data-delay="120">
+            Trece proyectos en producción —e-commerce, educación, finanzas y sector público—
+            más los productos que construyo por las noches.
+          </p>
+        </header>
+
+        <div class="filters reveal" data-reveal role="group" aria-label="Filtrar proyectos">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">Todos <span>17</span></button>
+          <button class="filter" data-filter="wordpress" aria-pressed="false">WordPress <span>13</span></button>
+          <button class="filter" data-filter="producto" aria-pressed="false">Producto &amp; JS <span>4</span></button>
+        </div>
+
+        <ol class="works" id="works">
+          <li class="work reveal" data-reveal data-category="wordpress" data-img="assets/projects/rolex-el-cronometro.jpg">
+            <a class="work__row" href="https://elcronometro.com/rolex-certified-pre-owned/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">01</span>
+              <span class="work__title">El Cronómetro · Rolex</span>
+              <span class="work__meta">E-commerce · WooCommerce</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/rolex-el-cronometro.jpg" alt="E-commerce El Cronómetro con relojes Rolex certificados" loading="lazy" decoding="async" width="900" height="425" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="wordpress" data-img="assets/projects/fp-ceu.jpg">
+            <a class="work__row" href="https://fpceu.es/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">02</span>
+              <span class="work__title">FP CEU Madrid</span>
+              <span class="work__meta">Educación · ACF · Gutenberg</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/fp-ceu.jpg" alt="Plataforma educativa FP CEU Madrid" loading="lazy" decoding="async" width="900" height="426" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="80" data-category="wordpress" data-img="assets/projects/vantia-capital.jpg">
+            <a class="work__row" href="https://vantiacapital.com/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">03</span>
+              <span class="work__title">Vantia Capital</span>
+              <span class="work__meta">Finanzas · Gutenberg</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/vantia-capital.jpg" alt="Sitio corporativo de Vantia Capital" loading="lazy" decoding="async" width="900" height="426" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-category="wordpress" data-img="assets/projects/joyeria-torrico.jpg">
+            <a class="work__row" href="https://www.joyeriatorrico.com/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">04</span>
+              <span class="work__title">Joyería Torrico</span>
+              <span class="work__meta">E-commerce · WooCommerce</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/joyeria-torrico.jpg" alt="E-commerce de Joyería Torrico" loading="lazy" decoding="async" width="900" height="430" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="wordpress" data-img="assets/projects/ceu-doctorado.jpg">
+            <a class="work__row" href="https://www.escueladoctorado.ceu.es/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">05</span>
+              <span class="work__title">Escuela de Doctorado CEU</span>
+              <span class="work__meta">Educación · ACF</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/ceu-doctorado.jpg" alt="Portal de programas de doctorado de la Escuela de Doctorado CEU" loading="lazy" decoding="async" width="900" height="462" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="80" data-category="wordpress" data-img="assets/projects/uf3-ceu.jpg">
+            <a class="work__row" href="https://uf3ceu.es/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">06</span>
+              <span class="work__title">UF3 CEU</span>
+              <span class="work__meta">Educación · ACF · Gutenberg</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/uf3-ceu.jpg" alt="Plataforma UF3 CEU de formación profesional" loading="lazy" decoding="async" width="900" height="462" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-category="wordpress" data-img="assets/projects/ideal-joyeros.jpg">
+            <a class="work__row" href="https://idealjoyeros.com/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">07</span>
+              <span class="work__title">Ideal Joyeros</span>
+              <span class="work__meta">E-commerce · WooCommerce</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/ideal-joyeros.jpg" alt="E-commerce Ideal Joyeros" loading="lazy" decoding="async" width="900" height="428" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="wordpress" data-img="assets/projects/aec-consultoras.jpg">
+            <a class="work__row" href="https://aecconsultoras.com/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">08</span>
+              <span class="work__title">AEC Consultoras</span>
+              <span class="work__meta">Corporativo · LESS</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/aec-consultoras.jpg" alt="Sitio corporativo de AEC Consultoras" loading="lazy" decoding="async" width="900" height="462" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="80" data-category="wordpress" data-img="assets/projects/finnovista.jpg">
+            <a class="work__row" href="https://www.finnovista.com/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">09</span>
+              <span class="work__title">Finnovista</span>
+              <span class="work__meta">Corporativo · LESS</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/finnovista.jpg" alt="Sitio corporativo de Finnovista" loading="lazy" decoding="async" width="900" height="462" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-category="wordpress" data-img="assets/projects/omexon.jpg">
+            <a class="work__row" href="https://www.omexom.es/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">10</span>
+              <span class="work__title">Omexon · VINCI Energies</span>
+              <span class="work__meta">Corporativo · LESS</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/omexon.jpg" alt="Sitio corporativo de Omexon, marca de VINCI Energies" loading="lazy" decoding="async" width="900" height="462" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="wordpress" data-img="assets/projects/perodri.jpg">
+            <a class="work__row" href="https://www.perodri.es/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">11</span>
+              <span class="work__title">Perodri</span>
+              <span class="work__meta">Corporativo · SCSS</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <img class="work__thumb" src="assets/projects/perodri.jpg" alt="Sitio corporativo de Perodri" loading="lazy" decoding="async" width="900" height="428" />
+            </a>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="80" data-category="wordpress" data-img="assets/projects/leap-nttdata.jpg">
+            <div class="work__row">
+              <span class="work__index">12</span>
+              <span class="work__title">LEAP · NTTData</span>
+              <span class="work__meta">Corporativo · LESS</span>
+              <span class="work__arrow" aria-hidden="true">·</span>
+              <img class="work__thumb" src="assets/projects/leap-nttdata.jpg" alt="Landing del programa LEAP de NTTData" loading="lazy" decoding="async" width="900" height="462" />
+            </div>
+          </li>
+
+          <li class="work reveal" data-reveal data-category="wordpress" data-mono="CPD">
+            <div class="work__row">
+              <span class="work__index">13</span>
+              <span class="work__title">Compideal Landing</span>
+              <span class="work__meta">UX/UI · +35% conversión</span>
+              <span class="work__arrow" aria-hidden="true">·</span>
+            </div>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="producto" data-img="assets/projects/coches-net-hyundai.jpg">
+            <div class="work__row">
+              <span class="work__index">14</span>
+              <span class="work__title">coches.net · Hyundai Tucson N Line</span>
+              <span class="work__meta">Automoción · JavaScript</span>
+              <span class="work__arrow" aria-hidden="true">·</span>
+              <img class="work__thumb" src="assets/projects/coches-net-hyundai.jpg" alt="Landing creativa del Hyundai Tucson N Line para coches.net" loading="lazy" decoding="async" width="900" height="462" />
+            </div>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="80" data-category="producto" data-mono="KIA">
+            <div class="work__row">
+              <span class="work__index">15</span>
+              <span class="work__title">PWA KIA</span>
+              <span class="work__meta">PWA · Service Workers</span>
+              <span class="work__arrow" aria-hidden="true">·</span>
+            </div>
+          </li>
+
+          <li class="work reveal" data-reveal data-category="producto" data-mono="EC">
+            <div class="work__row">
+              <span class="work__index">16</span>
+              <span class="work__title">Emotions Connect</span>
+              <span class="work__meta">Producto · SwiftUI</span>
+              <span class="work__arrow" aria-hidden="true">·</span>
+            </div>
+          </li>
+
+          <li class="work reveal" data-reveal data-delay="40" data-category="producto" data-mono="⚛">
+            <a class="work__row" href="https://github.com/hamdsgn" target="_blank" rel="noopener noreferrer" data-cursor="view">
+              <span class="work__index">17</span>
+              <span class="work__title">Portfolio en React</span>
+              <span class="work__meta">React · TypeScript</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
+
+        <p class="work__more reveal" data-reveal>
+          ¿Tienes algo en mente? <a class="link" href="#contacto">Cuéntamelo <span aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+    </section>
+
+    <div class="work-preview" id="workPreview" aria-hidden="true">
+      <img id="workPreviewImg" alt="" />
+      <span class="work-preview__mono" id="workPreviewMono"></span>
+    </div>
+
+    <!-- ───────────────────────── SOBRE MÍ ───────────────────────── -->
+    <section class="section about" id="sobre-mi">
+      <div class="shell">
+        <header class="section__head">
+          <p class="kicker reveal" data-reveal>03 — Sobre mí</p>
+          <h2 class="section__title reveal" data-reveal data-delay="60">
+            <span class="line"><span class="line__in">Diseño y código,</span></span>
+            <span class="line"><span class="line__in">sin frontera<span class="dot">.</span></span></span>
+          </h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__media reveal" data-reveal>
+            <figure class="about__portrait">
+              <img src="assets/img/about-portrait-700.webp"
+                   srcset="assets/img/about-portrait-700.webp 700w, assets/img/about-portrait-1086.webp 1086w"
+                   sizes="(max-width: 900px) 90vw, 32vw"
+                   width="1086" height="1448"
+                   alt="Hamilton Ramírez con polo azul marino y brazos cruzados"
+                   loading="lazy" decoding="async" />
+            </figure>
+
+            <aside class="badge" aria-label="Ficha de Hamilton Ramírez">
+              <img class="badge__photo" src="assets/img/about-badge-450.webp"
+                   srcset="assets/img/about-badge-450.webp 450w, assets/img/about-badge-900.webp 900w"
+                   sizes="160px" width="900" height="1200"
+                   alt="Retrato de Hamilton Ramírez sobre fondo blanco" loading="lazy" decoding="async" />
+              <p class="badge__name">Hamilton Ramírez</p>
+              <p class="badge__role">Frontend Developer<br />&amp; UX/UI</p>
+              <p class="badge__meta">Madrid, ES<br />2015 — 2027</p>
+              <span class="badge__code" aria-hidden="true"></span>
+            </aside>
+          </div>
+
+          <div class="about__copy">
+            <p class="about__intro reveal" data-reveal data-delay="60">
+              Empecé en el diseño gráfico y el mantenimiento web; hoy construyo la
+              arquitectura que sostiene a los equipos.
+            </p>
+            <p class="reveal" data-reveal data-delay="120">
+              Mi trabajo es el puente entre un diseño de Figma y un sitio que carga rápido,
+              se mantiene solo y vende. En Buleboo Studio creé desde cero el sistema de
+              diseño multimarca de la agencia basado en Atomic Design y coordiné a tres
+              personas frontend.
+            </p>
+            <p class="reveal" data-reveal data-delay="180">
+              Después fui WordPress Lead en Indegene preparando entornos Enterprise, y
+              freelance de UX/UI donde una landing llegó a subir un 35% la conversión.
+              He trabajado con Rolex, Vodafone, CEU, NTTData, KIA y MSD.
+            </p>
+
+            <ul class="about__list reveal" data-reveal data-delay="240">
+              <li><span>01</span>Diseño de interfaz y UX/UI en Figma</li>
+              <li><span>02</span>Temas, bloques y plugins a medida en WordPress</li>
+              <li><span>03</span>React y design systems basados en Atomic Design</li>
+              <li><span>04</span>Rendimiento, accesibilidad y CI/CD</li>
+            </ul>
+
+            <p class="about__sign reveal" data-reveal data-delay="300">
+              <span class="about__sig">Hamilton Ramírez</span>
+              <span class="mono">Frontend Developer &amp; UX/UI</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="mono-strip reveal" data-reveal>
+        <img src="assets/img/mono-strip-900.webp"
+             srcset="assets/img/mono-strip-900.webp 900w, assets/img/mono-strip-1536.webp 1536w"
+             sizes="100vw" width="1536" height="799"
+             alt="Cinco retratos en blanco y negro de Hamilton Ramírez con distintas expresiones"
+             loading="lazy" decoding="async" />
+        <figcaption class="mono-strip__caps">
+          <span>01 — Perfil</span>
+          <span>02 — Serio</span>
+          <span>03 — Neutro</span>
+          <span>04 — Travieso</span>
+          <span>05 — Capucha</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ───────────────────────── SERVICIOS ───────────────────────── -->
+    <section class="section services" id="servicios">
+      <div class="shell">
+        <header class="section__head">
+          <p class="kicker reveal" data-reveal>04 — Servicios</p>
+          <h2 class="section__title reveal" data-reveal data-delay="60">
+            <span class="line"><span class="line__in">Lo que hago</span></span>
+            <span class="line"><span class="line__in">y cómo lo hago<span class="dot">.</span></span></span>
+          </h2>
+          <p class="section__note reveal" data-reveal data-delay="120">
+            Un proceso claro, comunicación directa y entregas que se pueden ver funcionando
+            desde el primer día.
+          </p>
+        </header>
+
+        <div class="services__list">
+          <article class="service reveal" data-reveal>
+            <span class="service__index">01</span>
+            <h3 class="service__title">Diseño UI/UX &amp; Design Systems</h3>
+            <p class="service__desc">Sistemas multimarca basados en Atomic Design, prototipos y guías visuales que sobreviven al desarrollo.</p>
+            <span class="service__tags">Figma · Atomic Design · UX/UI</span>
+          </article>
+          <article class="service reveal" data-reveal>
+            <span class="service__index">02</span>
+            <h3 class="service__title">WordPress a medida</h3>
+            <p class="service__desc">Temas propios, bloques Gutenberg, ACF, WooCommerce y paneles que el cliente usa sin miedo.</p>
+            <span class="service__tags">PHP · ACF · WooCommerce</span>
+          </article>
+          <article class="service reveal" data-reveal>
+            <span class="service__index">03</span>
+            <h3 class="service__title">Frontend React</h3>
+            <p class="service__desc">SPA, dashboards y librerías de componentes con arquitectura limpia, tipado y estado global.</p>
+            <span class="service__tags">React · TypeScript · Vite</span>
+          </article>
+          <article class="service reveal" data-reveal>
+            <span class="service__index">04</span>
+            <h3 class="service__title">Rendimiento &amp; SEO</h3>
+            <p class="service__desc">Core Web Vitals en verde, semántica, accesibilidad y despliegues con Git y CI/CD.</p>
+            <span class="service__tags">WPO · Core Web Vitals · CI/CD</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── EXPERIENCIA ───────────────────────── -->
+    <section class="section experience" id="experiencia">
+      <div class="shell">
+        <header class="section__head">
+          <p class="kicker reveal" data-reveal>05 — Experiencia</p>
+          <h2 class="section__title reveal" data-reveal data-delay="60">
+            <span class="line"><span class="line__in">Mi recorrido</span></span>
+            <span class="line"><span class="line__in">hasta hoy<span class="dot">.</span></span></span>
+          </h2>
+          <p class="section__note reveal" data-reveal data-delay="120">
+            De maquetador y webmaster a arquitecto de interfaces. Cada etapa dejó algo.
+          </p>
+        </header>
+
+        <div class="jobs">
+          <article class="job reveal" data-reveal>
+            <div class="job__period">2026</div>
+            <div class="job__body">
+              <h3 class="job__role">WordPress Lead</h3>
+              <p class="job__company">Indegene · Remoto</p>
+              <p class="job__text">Incorporación como WordPress Lead en proyectos Enterprise de MSD Global Digital Productions: onboarding técnico, soluciones frontend y flujos de trabajo con Git y CI/CD.</p>
+              <p class="job__stack">WordPress Enterprise · Git · CI/CD</p>
+            </div>
+          </article>
+
+          <article class="job reveal" data-reveal>
+            <div class="job__period">2026</div>
+            <div class="job__body">
+              <h3 class="job__role">Diseñador UX/UI · Frontend</h3>
+              <p class="job__company">StartUp Compideal · Freelance</p>
+              <p class="job__text">Landing pages de Figma a WordPress, análisis de marca y adaptación de la identidad visual al entorno digital. Una de ellas subió la conversión un 35%.</p>
+              <p class="job__stack">Figma · WordPress · UX/UI</p>
+            </div>
+          </article>
+
+          <article class="job reveal" data-reveal>
+            <div class="job__period">2019 — 2025</div>
+            <div class="job__body">
+              <h3 class="job__role">Frontend Developer &amp; Jefe de Proyecto</h3>
+              <p class="job__company">Buleboo Studio · Madrid</p>
+              <p class="job__text">Sistema de diseño multimarca basado en Atomic Design, arquitectura SCSS modular configurable por variables CSS, coordinación de tres personas frontend y un 20% menos de tiempos de desarrollo. PWA de KIA usada en más de 10 ferias nacionales.</p>
+              <p class="job__stack">Atomic Design · SCSS · LESS · PHP · PWA</p>
+            </div>
+          </article>
+
+          <article class="job reveal" data-reveal>
+            <div class="job__period">2015 — 2019</div>
+            <div class="job__body">
+              <h3 class="job__role">Webmaster &amp; Diseñador Gráfico</h3>
+              <p class="job__company">Harvey &amp; Lluch Consultores · Madrid</p>
+              <p class="job__text">Decenas de sitios web con WordPress, Joomla y Moodle, personalización de CRM con HTML y CSS, e-learning en SCORM, identidad corporativa, piezas gráficas y vídeo.</p>
+              <p class="job__stack">WordPress · Joomla · Moodle · SCORM</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="stack">
+          <h3 class="stack__title reveal" data-reveal>Herramientas del día a día</h3>
+          <div class="stack__grid reveal" data-reveal data-delay="80">
+            <div class="stack__group">
+              <h4>Frontend</h4>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript ES6+</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>SCSS</li>
+                <li>LESS</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="stack__group">
+              <h4>CMS &amp; back</h4>
+              <ul>
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>ACF &amp; Gutenberg</li>
+              </ul>
+            </div>
+            <div class="stack__group">
+              <h4>Diseño</h4>
+              <ul>
+                <li>Figma</li>
+                <li>Atomic Design</li>
+              </ul>
+            </div>
+            <div class="stack__group">
+              <h4>Workflow</h4>
+              <ul>
+                <li>Git &amp; GitHub</li>
+                <li>Vite</li>
+                <li>Core Web Vitals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── CONTACTO ───────────────────────── -->
+    <section class="section contact" id="contacto">
+      <div class="shell">
+        <header class="contact__head">
+          <p class="kicker reveal" data-reveal>06 — Contacto</p>
+          <h2 class="contact__title reveal" data-reveal data-delay="60">
+            <span class="line"><span class="line__in">¿Hablamos<span class="dot">?</span></span></span>
+          </h2>
+          <p class="contact__lead reveal" data-reveal data-delay="120">
+            Cuéntame tu idea. Respondo en menos de 24 horas, siempre con una propuesta clara
+            y un plazo real.
+          </p>
+        </header>
+
+        <div class="contact__grid">
+          <form class="form reveal" data-reveal id="contactForm" novalidate>
+            <div class="field">
+              <label class="field__label" for="f-name">Nombre</label>
+              <input id="f-name" type="text" name="name" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-email">Email</label>
+              <input id="f-email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-message">Mensaje</label>
+              <textarea id="f-message" name="message" rows="4" placeholder="Háblame del proyecto…" required></textarea>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--solid" type="submit" data-cursor="link">Enviar mensaje <span aria-hidden="true">↗</span></button>
+              <p class="form__note mono">Respuesta media &lt; 24 h · Sin spam</p>
+            </div>
+          </form>
+
+          <aside class="contact__side reveal" data-reveal data-delay="120">
+            <div class="contact__block">
+              <span class="contact__label mono">Email</span>
+              <button class="contact__value contact__copy" data-copy="cala_ham12@hotmail.com" data-cursor="link">
+                cala_ham12@hotmail.com <span class="contact__copy-tag mono">copiar</span>
+              </button>
+            </div>
+
+            <div class="contact__block">
+              <span class="contact__label mono">Teléfono</span>
+              <a class="contact__value" href="tel:+34648691909">+34 648 69 19 09</a>
+            </div>
+
+            <div class="contact__block">
+              <span class="contact__label mono">Redes</span>
+              <ul class="socials">
+                <li><a href="https://github.com/hamdsgn" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://www.linkedin.com/in/hamiltonramirez/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://web-portfolio-hami.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio web <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2JvYy80OTc2MjIyY2E4MTFjODhkL0VZNFdlak8wRFdGSHJFZGUwbDBCYVh3Qk5HYkdOOVI5Yl82WFc2NzBfeDRtdGc%5FZT1XZUc1ZU4mZG93bmxvYWQ9MQ&amp;cid=4976222CA811C88D&amp;id=4976222CA811C88D%21s337a168e0db44761ac475ed25d01697c&amp;parId=4976222CA811C88D%21s4f4f6e9f2a8145159da190c16ccc5110&amp;o=download1" target="_blank" rel="noopener noreferrer">Currículum <span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </div>
+
+            <p class="contact__status"><span class="status__dot"></span>Disponible para freelance · España · Remoto</p>
+          </aside>
+
+          <figure class="contact__portrait reveal" data-reveal data-delay="180">
+            <img src="assets/img/contact-portrait-700.webp"
+                 srcset="assets/img/contact-portrait-700.webp 700w, assets/img/contact-portrait-1200.webp 1200w"
+                 sizes="(max-width: 900px) 90vw, 26vw"
+                 width="1200" height="1092"
+                 alt="Retrato de Hamilton Ramírez con gafas de sol de reflejo naranja"
+                 loading="lazy" decoding="async" />
+            <span class="contact__tint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__top">
+      <a class="brand" href="#inicio">Ramírez<span class="dot">.</span></a>
+      <p class="footer__copy">© <span class="js-year">2027</span> Hamilton Ramírez — Frontend Developer &amp; UX/UI.</p>
+      <p class="footer__clock mono">Madrid <time class="js-clock">--:--</time></p>
+      <a class="footer__up" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="footer__word" aria-hidden="true">Hamilton Ramírez — 2027</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/work.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/preloader.js"></script>
+</body>
+</html>

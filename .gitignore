@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Fuentes de diseño de V2: no se publican en GitHub Pages
+v2/imagenes*/
+v2/referencias*/

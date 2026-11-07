@@ -1,0 +1,142 @@
+/* ==========================================================================
+   V2 · animations
+   Reveals por scroll, líneas enmascaradas, marquee y estados de movimiento.
+   Solo transform / opacity: nada de blur ni backdrop-filter.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Reveals
+   -------------------------------------------------------------------------- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal]:not(.is-inview) {
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-inview {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.line__in {
+  transform: translate3d(0, 110%, 0);
+  transition: transform 1.05s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+
+.line:not(.is-inview) .line__in {
+  will-change: transform;
+}
+
+.line.is-inview .line__in,
+.line__in.is-inview {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Evita dobles desplazamientos en títulos que ya animan por líneas */
+.section__title[data-reveal],
+.contact__title[data-reveal] {
+  transform: translate3d(0, 12px, 0);
+}
+
+.section__title[data-reveal].is-inview,
+.contact__title[data-reveal].is-inview {
+  transform: translate3d(0, 0, 0);
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes
+   -------------------------------------------------------------------------- */
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 165, 36, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(245, 165, 36, 0);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  45%,
+  55% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Detalles animados
+   -------------------------------------------------------------------------- */
+
+.js-clock {
+  font-variant-numeric: tabular-nums;
+}
+
+.stat__num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Punto del eyebrow con un pulso muy leve */
+.eyebrow__dot {
+  animation: pulse 3.4s var(--ease-io) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Movimiento reducido
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  [data-reveal],
+  .line__in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .marquee__track {
+    animation: none;
+  }
+
+  .work-preview {
+    display: none;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
