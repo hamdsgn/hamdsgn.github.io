@@ -2,6 +2,11 @@
 
 Portfolio de **Hamilton Ramírez Hernández**, frontend developer (HTML, CSS, JavaScript y WordPress) y especialista en sistemas de diseño. Tema oscuro, gradientes animados y micro‑interacciones al estilo Awwwards, construido **sin dependencias**: solo HTML, CSS y JavaScript nativo.
 
+## Versiones
+
+- **V1** — publicada en [hamdsgn.github.io](https://hamdsgn.github.io) (raíz del repo).
+- **V2** — rediseño editorial oscuro con acento ámbar en [hamdsgn.github.io/v2](https://hamdsgn.github.io/v2/). Se mantiene en `/v2` hasta su aprobación. Usa tipografías auto-hospedadas y no emplea `backdrop-filter` ni desenfoques grandes.
+
 ## Verlo en local
 
 ```bash
